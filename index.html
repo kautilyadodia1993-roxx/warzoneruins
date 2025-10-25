@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Platformer</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover,user-scalable=no" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="rotateOverlay" class="rotate-overlay">Rotate device to landscape</div>
+
+  <!-- Start overlay (always on top) -->
+  <div id="startOverlay" class="start-overlay">
+    <div class="start-card">
+      <h3>Stage 1: Reach the Door</h3>
+      <p>Collect the key, avoid enemy fire, reach the door to win.</p>
+      <button id="btnStart">Start Game</button>
+      <div class="hint">Desktop: A/D move, W jump, Q shoot, E mega.<br/>Mobile: Touch shows joystick; Shoot/Mega top-left.</div>
+    </div>
+  </div>
+
+  <!-- Game canvas -->
+  <canvas id="game" width="1280" height="720"></canvas>
+
+  <!-- HUD (top-right — unchanged) -->
+  <div id="hud">
+    <div>Key: <span id="keyState">❌</span></div>
+    <div class="label">Mega Ready</div>
+    <div class="bar"><div id="megaBar"></div></div>
+    <button id="musicToggle" class="music">Music: Off</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
